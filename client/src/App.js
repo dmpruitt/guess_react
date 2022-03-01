@@ -4,13 +4,13 @@ import "./App.css";
 import GameBoard from "./components/GameBoard";
 
 function App() {
-  const [gameChoice, setGameChoice] = useState("none");
+  const [gameChoice, setGameChoice] = useState("reset");
 
   const userInputHandler = (evt) => {
     evt.preventDefault();
     setGameChoice(evt.target.value);
   };
-  
+
   return (
     <div>
       <h1>Welcome</h1>
@@ -22,8 +22,8 @@ function App() {
         <button onClick={userInputHandler} value="reverse">
           Reverse
         </button>
-        <button onClick={userInputHandler} value="none">
-          Exit
+        <button onClick={userInputHandler} value="reset">
+          Reset
         </button>
       </form>
       {<GameBoard gameChoice={gameChoice} />}

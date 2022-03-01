@@ -4,7 +4,7 @@ import GuessGame from "./GuessGame";
 import GuessReverse from "./GuessReverse";
 
 function GameBoard(props) {
-  if (props.gameChoice === "none") {
+  if (props.gameChoice === "reset") {
     return (<></>);
   }
   if (props.gameChoice === "reverse") {
