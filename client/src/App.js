@@ -8,23 +8,27 @@ function App() {
 
   const userInputHandler = (evt) => {
     evt.preventDefault();
-    
     setGameChoice(evt.target.value);
-      };
+  };
+  
   return (
     <div>
-    <h1>Welcome</h1>
-    <h2>Please choose game you would like to play</h2>
-    <form>
-      <button onClick={userInputHandler} value="original">Original</button>
-      <button onClick={userInputHandler} value="reverse">Reverse</button>
-      <button onClick={userInputHandler} value="none">Exit</button>
-    </form>
+      <h1>Welcome</h1>
+      <h2>Please choose game you would like to play</h2>
+      <form>
+        <button onClick={userInputHandler} value="original">
+          Original
+        </button>
+        <button onClick={userInputHandler} value="reverse">
+          Reverse
+        </button>
+        <button onClick={userInputHandler} value="none">
+          Exit
+        </button>
+      </form>
       {<GameBoard gameChoice={gameChoice} />}
     </div>
   );
 }
 
 export default App;
-
-
