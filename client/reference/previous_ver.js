@@ -105,7 +105,7 @@ async function game1() {
       userAnswer = await ask(
         `is your number \[H\]igher or \[L\]ower? ${prompt}`
       );
-        // adjusts range and increments the number of tries and stores the next guess at the number
+      // adjusts range and increments the number of tries and stores the next guess at the number
       if (userAnswer === "h") {
         rangeMin = computerGuess + 1;
         computerGuess = Math.floor((rangeMax - rangeMin) / 2 + rangeMin);
