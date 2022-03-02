@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./App.css";
 import GameBoard from "./components/GameBoard";
+import Header from "./components/Header";
 
 function App() {
   const [gameChoice, setGameChoice] = useState("reset");
@@ -12,10 +13,10 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Welcome</h1>
-      <h2>Please choose game you would like to play</h2>
-      <form>
+    <div className="container">
+      <Header />
+      
+      <form className="input-form">
         <button onClick={userInputHandler} value="original">
           Original
         </button>
